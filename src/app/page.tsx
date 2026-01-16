@@ -256,37 +256,7 @@ export default function Home() {
               </div>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="glass-card rounded-3xl p-8"
-            >
-              <h3 className="text-2xl font-bold mb-6">Quick Estimate</h3>
-              <div className="space-y-4">
-                <div className="flex items-center justify-between p-4 bg-muted/50 rounded-xl">
-                  <span>Website Development</span>
-                  <span className="font-semibold">From $2,000</span>
-                </div>
-                <div className="flex items-center justify-between p-4 bg-muted/50 rounded-xl">
-                  <span>Mobile App</span>
-                  <span className="font-semibold">From $5,000</span>
-                </div>
-                <div className="flex items-center justify-between p-4 bg-muted/50 rounded-xl">
-                  <span>SaaS Platform</span>
-                  <span className="font-semibold">From $8,000</span>
-                </div>
-                <div className="flex items-center justify-between p-4 bg-muted/50 rounded-xl">
-                  <span>Automation</span>
-                  <span className="font-semibold">From $3,000</span>
-                </div>
-              </div>
-              <Link href="/signup">
-                <Button className="w-full mt-6 bg-gradient-to-r from-indigo-500 to-purple-600">
-                  Get Detailed Quote
-                </Button>
-              </Link>
-            </motion.div>
+            
           </div>
         </div>
       </section>
