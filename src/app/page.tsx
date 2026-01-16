@@ -234,7 +234,7 @@ export default function Home() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-            
+            >
               <h2 className="text-4xl font-bold mb-6">How It Works</h2>
               <div className="space-y-6">
                 {[
