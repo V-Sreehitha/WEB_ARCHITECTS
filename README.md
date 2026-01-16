@@ -1,6 +1,14 @@
+# Next.js Project & IT Service Booking System
+
+This project combines a Next.js starter project with the IT Service Booking System.
+
+---
+
+## Next.js Starter Info
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+### Getting Started
 
 First, run the development server:
 
@@ -12,25 +20,29 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+IT Service Booking System
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+A web-based platform for companies to showcase their services and for clients to request customized services. This system allows clients to choose services, add extra features, provide project details, and submit requests directly to the company.
 
-## Learn More
+Features
+Client Side
 
-To learn more about Next.js, take a look at the following resources:
+Service Browsing: View all services offered by the company.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Service Customization: Add extra features or requirements for each service.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Project Details Submission: Provide project description, expected timeline, and budget.
 
-## Deploy on Vercel
+Request Submission: Send service requests directly to the company for approval.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Client Dashboard: Track status of requests and previous submissions.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Technologies Used
+
+Frontend: React.js, TypeScript
+
+Styling: Tailwind CSS
+
+Version Control: Git & GitHub
