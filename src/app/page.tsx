@@ -60,8 +60,18 @@ export default function Home() {
             </div>
 
             <div className="hidden md:flex items-center gap-8">
-              <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">Services</a>
-              <a href="#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors">How It Works</a>
+              <a
+                href="#services"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Services
+              </a>
+              <a
+                href="#how-it-works"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                How It Works
+              </a>
             </div>
 
             <div className="hidden md:flex items-center gap-3">
@@ -91,14 +101,25 @@ export default function Home() {
             className="md:hidden glass-card border-t"
           >
             <div className="px-4 py-4 space-y-3">
-              <a href="#services" className="block py-2 text-muted-foreground">Services</a>
-              <a href="#how-it-works" className="block py-2 text-muted-foreground">How It Works</a>
+              <a href="#services" className="block py-2 text-muted-foreground">
+                Services
+              </a>
+              <a
+                href="#how-it-works"
+                className="block py-2 text-muted-foreground"
+              >
+                How It Works
+              </a>
               <div className="pt-3 space-y-2">
                 <Link href="/login" className="block">
-                  <Button variant="outline" className="w-full">Login</Button>
+                  <Button variant="outline" className="w-full">
+                    Login
+                  </Button>
                 </Link>
                 <Link href="/signup" className="block">
-                  <Button className="w-full bg-gradient-to-r from-indigo-500 to-purple-600">Get Started</Button>
+                  <Button className="w-full bg-gradient-to-r from-indigo-500 to-purple-600">
+                    Get Started
+                  </Button>
                 </Link>
               </div>
             </div>
@@ -115,6 +136,7 @@ export default function Home() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left: Hero Text */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -128,15 +150,29 @@ export default function Home() {
                 <span className="gradient-text block">Like Never Before</span>
               </h1>
               <p className="text-xl text-muted-foreground mb-8 max-w-lg">
-                Browse services, select features, see estimates, and track your project — all in one place. No more confusion or endless emails.
+                Browse services, select features, see estimates, and track your
+                project — all in one place. No more confusion or endless emails.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link href="/signup">
-                  <Button size="lg" className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 gap-2">
+                  <Button
+                    size="lg"
+                    className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 gap-2"
+                  >
                     Start Booking <ArrowRight className="w-5 h-5" />
                   </Button>
                 </Link>
               </div>
+            </motion.div>
+
+            {/* Right: Animation/Image */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="hidden lg:flex justify-center"
+            >
+              
             </motion.div>
           </div>
         </div>
@@ -153,7 +189,8 @@ export default function Home() {
           >
             <h2 className="text-4xl font-bold mb-4">Our Services</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Choose from our range of professional IT services and customize them to fit your needs
+              Choose from our range of professional IT services and customize
+              them to fit your needs
             </p>
           </motion.div>
 
@@ -168,7 +205,9 @@ export default function Home() {
               >
                 <Card className="group h-full hover:shadow-xl transition-all duration-300 cursor-pointer border-0 bg-card/50 backdrop-blur">
                   <CardContent className="p-6">
-                    <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                    <div
+                      className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
+                    >
                       <service.icon className="w-7 h-7 text-white" />
                     </div>
                     <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
@@ -182,8 +221,12 @@ export default function Home() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="py-20 bg-gradient-to-r from-indigo-50 to-purple-50" id="how-it-works">
+      <section
+        className="py-20 bg-gradient-to-r from-indigo-50 to-purple-50"
+        id="how-it-works"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Title */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -196,66 +239,62 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              {[
-                { step: "01", title: "Browse Services", desc: "Discover our full range of IT solutions, from websites to mobile apps, SaaS, and automation." },
-                { step: "02", title: "Select Features", desc: "Customize your project by choosing the exact features you need." },
-                { step: "03", title: "Submit Your Request", desc: "Fill out a simple form with your project details and send your request instantly." },
-                { step: "04", title: "Track & Collaborate", desc: "Monitor progress in real-time, communicate with your team, and approve milestones with ease." },
-              ].map((item) => (
-                <div key={item.step} className="flex gap-6 mb-8 items-start">
-                  <div className="flex-shrink-0 w-14 h-14 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold text-lg shadow-lg">
-                    {item.step}
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                    <p className="text-muted-foreground">{item.desc}</p>
-                  </div>
+          {/* Horizontal Steps */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex flex-col lg:flex-row justify-between items-start gap-6"
+          >
+            {[
+              {
+                step: "01",
+                title: "Browse Services",
+                desc: "Discover our full range of IT solutions, from websites to mobile apps, SaaS, and automation.",
+              },
+              {
+                step: "02",
+                title: "Select Features",
+                desc: "Customize your project by choosing the exact features you need.",
+              },
+              {
+                step: "03",
+                title: "Submit Your Request",
+                desc: "Fill out a simple form with your project details and send your request instantly.",
+              },
+              {
+                step: "04",
+                title: "Track & Collaborate",
+                desc: "Monitor progress in real-time, communicate with your team, and approve milestones with ease.",
+              },
+            ].map((item) => (
+              <div
+                key={item.step}
+                className="flex-1 flex flex-col items-center text-center p-6 bg-white/30 backdrop-blur rounded-xl shadow-lg"
+              >
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold text-lg mb-4">
+                  {item.step}
                 </div>
-              ))}
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="glass-card rounded-3xl p-8 shadow-xl">
-                <h3 className="text-2xl font-bold mb-6 text-center">Instant Project Estimate</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between p-4 bg-muted/50 rounded-xl">
-                    <span>Website Development</span>
-                    <span className="font-semibold">From $2,000</span>
-                  </div>
-                  <div className="flex items-center justify-between p-4 bg-muted/50 rounded-xl">
-                    <span>Mobile App</span>
-                    <span className="font-semibold">From $5,000</span>
-                  </div>
-                  <div className="flex items-center justify-between p-4 bg-muted/50 rounded-xl">
-                    <span>SaaS Platform</span>
-                    <span className="font-semibold">From $8,000</span>
-                  </div>
-                  <div className="flex items-center justify-between p-4 bg-muted/50 rounded-xl">
-                    <span>Business Automation</span>
-                    <span className="font-semibold">From $3,000</span>
-                  </div>
-                </div>
-                <Link href="/signup">
-                  <Button className="w-full mt-6 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700">
-                    Get Detailed Quote
-                  </Button>
-                </Link>
+                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                <p className="text-muted-foreground">{item.desc}</p>
               </div>
-            </motion.div>
-          </div>
+            ))}
+          </motion.div>
         </div>
       </section>
+
+     <footer className="py-6 text-center" style={{ 
+  background: "linear-gradient(90deg, #F3F9F4 0%, #DAF0E3 100%)"
+}}>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  
+    <p className="text-gray-700 text-sm font-medium">
+      © Jan, 2026 <span className="font-semibold">TechFlow</span> · Done by <span className="font-semibold">WEB ARCHITECTS</span>
+    </p>
+  </div>
+</footer>
+
+
     </div>
   );
 }
