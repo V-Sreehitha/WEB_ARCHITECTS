@@ -1,9 +1,0 @@
-{
-  "projectId": "be448dba-320f-42d7-b5b4-4237bec4f292",
-  "createdAt": 1768562125186,
-  "version": "1.0",
-  "startupCommands": [
-    "cd WEBARC~1; bun install; bun run dev"
-  ],
-  "templateId": "nextjs"
-}
